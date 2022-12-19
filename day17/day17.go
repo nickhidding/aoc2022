@@ -110,16 +110,26 @@ func main() {
 		}
 
 		// fmt.Printf("Total tower height after %d iterations: %d\n", i+1, towerHeight(&chamber))
+
+		// full := true
+		// for i := 0; i < 7; i++ {
+		// 	if chamber[towerHeight(&chamber)-1][i] != "#" {
+		// 		full = false
+		// 	}
+		// }
+		// if full {
+		// 	fmt.Println("full line at ", i)
+		// }
 	}
 
-	// fmt.Println()
-	// for x := towerHeight(&chamber); x >= 0; x-- {
-	// 	fmt.Printf("%4d ", x)
-	// 	for y := 0; y < 7; y++ {
-	// 		fmt.Print(chamber[x][y])
-	// 	}
-	// 	fmt.Println()
-	// }
+	fmt.Println()
+	for x := towerHeight(&chamber); x >= 0; x-- {
+		fmt.Printf("%4d ", x)
+		for y := 0; y < 7; y++ {
+			fmt.Print(chamber[x][y])
+		}
+		fmt.Println()
+	}
 	fmt.Printf("\nTotal tower height after %d iterations: %d\n", iterations, towerHeight(&chamber))
 
 	elapsed := time.Since(mainStart)
